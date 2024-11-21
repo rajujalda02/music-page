@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add this to your <head> tag -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>RJ Music</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Albums</a></li>
+            </ul>
+        </nav>
+        <form class="search-form">
+            <input type="text" id="search-input" placeholder="Search songs..." oninput="searchSongs()" />
+        </form>
+    </header>
+
+    <section>
+        <h2>Available Albums</h2>
+        <div class="album-list" id="albumList">
+            <!-- Album 1 -->
+            <div class="album-item" data-album-name="Odiyamma">
+                <img src="img1.jpg" alt="Album 1">
+                <h3>Odiyamma</h3>
+                <audio id="odiyamma" controls>
+                    <source src="odiyamma.mp3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Odiyamma')">Add to Cart</button>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="album-item" data-album-name="Samayama">
+                <img src="img2.jpg" alt="Album 2">
+                <h3>Samayama</h3>
+                <audio id="samayama" controls>
+                    <source src="samayama.mp3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Samayama')">Add to Cart</button>
+            </div>
+
+            <!-- Album 3 -->
+            <div class="album-item" data-album-name="Enna Sona">
+                <img src="img63.jpg" alt="Album 3">
+                <h3>Enna Sona</h3>
+                <audio id="EnnaSona" controls>
+                    <source src="Enna sona.mp3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Enna Sona')">Add to Cart</button>
+            </div>
+
+            <!-- Album 4 -->
+            <div class="album-item" data-album-name="Chalore">
+                <img src="img13.jpg" alt="Album 4">
+                <h3>Chalore</h3>
+                <audio id="chalore" controls>
+                    <source src="Chalore Chalore.mp3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Chalore')">Add to Cart</button>
+            </div>
+
+            <!-- Album 5 -->
+            <div class="album-item" data-album-name="Gaaju bomma">
+                <img src="gaaju bomma img.jpg" alt="Album 5">
+                <h3>Gaaju bomma</h3>
+                <audio id="Gaaju Bomma" controls>
+                    <source src="Gaaju Bomma.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Gaaju bomma')">Add to Cart</button>
+            </div>
+
+            <!-- Album 6 -->
+            <div class="album-item" data-album-name="Ninnu chuudagaane">
+                <img src="ninnu chuudagaane img.jpeg" alt="Album 6">
+                <h3>Ninnu chuudagaane</h3>
+                <audio id="Ninnu Chuudagaane" controls>
+                    <source src="Ninnu chudagane.mp3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Ninnu chuudagaane')">Add to Cart</button>
+            </div>
+
+            <!-- Album 7 -->
+            <div class="album-item" data-album-name="king of kotha">
+                <img src="king of kotha img.jpg" alt="Album 7">
+                <h3>king of kotha</h3>
+                <audio id="king of Kotha" controls>
+                    <source src="King-of-Kotha-(Teaser-Theme)-MassTamilan.dev.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('king of kotha')">Add to Cart</button>
+            </div>
+
+            <!-- Album 8 -->
+            <div class="album-item" data-album-name="sorry">
+                <img src="sorry by justin beber.img.jpeg" alt="Album 8">
+                <h3>Sorry</h3>
+                <audio id="Sorry" controls>
+                    <source src="Sorry by Justin Bieber.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('sorry')">Add to Cart</button>
+            </div>
+
+            <!-- Album 9 -->
+            <div class="album-item" data-album-name="APT.">
+                <img src="apt.img.png" alt="Album 9">
+                <h3>APT.</h3>
+                <audio id="ApT." controls>
+                    <source src="Apt - PagalHits.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('APT.')">Add to Cart</button>
+            </div>
+
+            <!-- Album 10 -->
+            <div class="album-item" data-album-name="Popular">
+                <img src="popular.img.png" alt="Album 10">
+                <h3>Popular</h3>
+                <audio id="popular" controls>
+                    <source src="Popular.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Popular')">Add to Cart</button>
+            </div>
+
+            <!-- Album 11 -->
+            <div class="album-item" data-album-name="Adhiyee">
+                <img src="adhiyee.jpg" alt="Album 11">
+                <h3>Adhiye</h3>
+                <audio id="Adhiye" controls>
+                    <source src="adhiyee.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Adhiyee')">Add to Cart</button>
+            </div>
+
+            <!-- Album 12 -->
+            <div class="album-item" data-album-name="Allasani">
+                <img src="allasaani jpg.webp" alt="Album 12">
+                <h3>Allasani Vaari</h3>
+                <audio id="allasani" controls>
+                    <source src="Allasani Vaari.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Allasani')">Add to Cart</button>
+            </div>
+
+            <!-- Album 13 -->
+            <div class="album-item" data-album-name="Arerey-Manasa">
+                <img src="Arerey-Manasa. jpg.webp" alt="Album 13">
+                <h3>Arerey-Manasa</h3>
+                <audio id="arerey-manasa" controls>
+                    <source src="Arerey Manasa.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Arerey-Manasa')">Add to Cart</button>
+            </div>
+
+            <!-- Album 14 -->
+            <div class="album-item" data-album-name="Bekhayali">
+                <img src="bekhayali. jpg.webp" alt="Album 14">
+                <h3>Bekhayali</h3>
+                <audio id="bekhayali" controls>
+                    <source src="ARIJIT SINGH VERSION_ Bekhayali (LYRICAL)  Kabir Singh  Shahid K,Kiara A  Sandeep Reddy V Irshad.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Bekhayali')">Add to Cart</button>
+            </div>
+
+            <!-- Album 15 -->
+            <div class="album-item" data-album-name="Blinding lights">
+                <img src="blinding lights .jpg" alt="Album 15">
+                <h3>Blinding lights</h3>
+                <audio id="blinding lights" controls>
+                    <source src="blinding lights.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Blinding lights')">Add to Cart</button>
+            </div>
+
+            <!-- Album 16 -->
+            <div class="album-item" data-album-name="Gaali vaaluga">
+                <img src="gaali vaaluga. jpg.webp" alt="Album 16">
+                <h3>Gaali vaaluga</h3>
+                <audio id="gaali vaaluga" controls>
+                    <source src="Gaali Vaaluga.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Gaali vaaluga')">Add to Cart</button>
+            </div>
+
+            <!-- Album 17 -->
+            <div class="album-item" data-album-name="Hua main">
+                <img src="hua main.webp" alt="Album 17">
+                <h3>Hua main</h3>
+                <audio id="hua main" controls>
+                    <source src="hua main.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Hua main')">Add to Cart</button>
+            </div>
+
+            <!-- Album 18 -->
+            <div class="album-item" data-album-name="Jab thak">
+                <img src="jab thak .jpg" alt="Album 18">
+                <h3>Jab thak</h3>
+                <audio id="jab thak" controls>
+                    <source src="JAB TAK - Full Song ( Audio)  M.S. DHONI -THE UNTOLD STORY  Sushant Singh Rajput , Disha Patani.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Jab thak')">Add to Cart</button>
+            </div>
+
+            <!-- Album 19 -->
+            <div class="album-item" data-album-name="Kadalalle">
+                <img src="Kadalalle. jpg.webp" alt="Album 19">
+                <h3>Kadalalle</h3>
+                <audio id="audio19" controls>
+                    <source src="Kadalalle.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Kadalalle')">Add to Cart</button>
+            </div>
+
+            <!-- Album 20 -->
+            <div class="album-item" data-album-name="Kadhaipoma">
+                <img src="kadhaipoma. jpg.webp" alt="Album 20">
+                <h3>Kadhaipoma</h3>
+                <audio id="kadhaipoma" controls>
+                    <source src="kadiponma.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="addToCart('Kadhaipoma')">Add to Cart</button>
+            </div>
+<!-- Album 21 -->
+<div class="album-item" data-album-name="Kun faya kun">
+    <img src="kun  faya kun. jpg.webp" alt="Album 21">
+    <h3>Kun faya kun</h3>
+    <audio id="kun faya kun" controls>
+        <source src="kun faya.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Kun faya kun')">Add to Cart</button>
+</div>
+
+<!-- Album 22 -->
+<div class="album-item" data-album-name="Maya">
+    <img src="maya. jpg.webp" alt="Album 22">
+    <h3>Maya</h3>
+    <audio id="maya" controls>
+        <source src="Maya.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Maya')">Add to Cart</button>
+</div>
+
+<!-- Album 23 -->
+<div class="album-item" data-album-name="Panjaa">
+    <img src="panjaa. jpg.webp" alt="Album 23">
+    <h3>Panjaa</h3>
+    <audio id="panjaa" controls>
+        <source src="Panja.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Panjaa')">Add to Cart</button>
+</div>
+
+<!-- Album 24 -->
+<div class="album-item" data-album-name="Starboy">
+    <img src="starboy. jpg.webp" alt="Album 24">
+    <h3>Starboy</h3>
+    <audio id="starboy" controls>
+        <source src="starboy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Starboy')">Add to Cart</button>
+</div>
+
+<!-- Album 25 -->
+<div class="album-item" data-album-name="Tere naina">
+    <img src="tera naina.jpg" alt="Album 25">
+    <h3>Tere naina</h3>
+    <audio id="tere naina" controls>
+        <source src="tere naina.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Tere naina')">Add to Cart</button>
+</div>
+
+<!-- Album 26 -->
+<div class="album-item" data-album-name="The life of ram">
+    <img src="the life of ram. jpg.webp" alt="Album 26">
+    <h3>The life of ram</h3>
+    <audio id="the life of ram" controls>
+        <source src="The Life Of Ram.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('The life of ram')">Add to Cart</button>
+</div>
+
+<!-- Album 27 -->
+<div class="album-item" data-album-name="Thuj me rab">
+    <img src="thuj me rab. jpg.webp" alt="Album 27">
+    <h3>Thuj me rab</h3>
+    <audio id="thuj me rab" controls>
+        <source src="thujme rab.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Thuj me rab')">Add to Cart</button>
+</div>
+
+<!-- Album 28 -->
+<div class="album-item" data-album-name="Uyire">
+    <img src="uyire. jpg.webp" alt="Album 28">
+    <h3>Uyire</h3>
+    <audio id="uyire" controls>
+        <source src="uyire.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="addToCart('Uyire')">Add to Cart</button>
+</div>
+        </div>
+    </section>
+    <div id="song-title">Now Playing: </div>
+    <button class="prev-button">Previous</button>
+    <button class="next-button">Next</button>
+    
+    <!-- Cart and Controls Section -->
+    <div id="controls">
+        <input type="number" id="duration" placeholder="Set duration (min)" min="1">
+        <button class="play-button" onclick="startPlayback()"><i class="fas fa-play"></i></button>
+        <button id="shuffle-button" onclick="toggleShuffle()">Shuffle</button>
+    </div>
+
+    <section id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Music App. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
